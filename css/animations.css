@@ -1,0 +1,392 @@
+/* =========================================
+   GK MILL CARE - ANIMATIONS
+========================================= */
+
+
+/* =========================================
+   PAGE LOAD
+========================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    animation: fadeDown 0.7s ease both;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-text {
+    animation: fadeLeft 0.9s ease both;
+}
+
+.hero-image {
+    animation: fadeRight 0.9s ease 0.15s both;
+}
+
+.hero-label {
+    animation: fadeUp 0.7s ease 0.1s both;
+}
+
+.hero-content h1 {
+    animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.hero-content p {
+    animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.hero-buttons {
+    animation: fadeUp 0.8s ease 0.4s both;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   QUICK SERVICE CARDS
+========================================= */
+
+.highlight-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   MACHINE CARDS
+========================================= */
+
+.machine-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.machine-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.machine-card img {
+    transition:
+        transform 0.5s ease;
+}
+
+.machine-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.service-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   ABOUT IMAGE
+========================================= */
+
+.about-image img {
+    transition:
+        transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+input,
+select,
+textarea {
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-menu a {
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 5px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary-blue);
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 60%;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo img {
+    transition:
+        transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   FLOATING CONTACT BUTTONS
+========================================= */
+
+.floating-whatsapp,
+.floating-call,
+.floating-btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.floating-whatsapp:hover,
+.floating-call:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   IMAGE FLOATING EFFECT
+========================================= */
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.hero-image img {
+    animation:
+        gentleFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================================
+   PULSE EFFECT
+========================================= */
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 101, 179, 0.30);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(0, 101, 179, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 101, 179, 0);
+    }
+}
+
+.nav-quote-button {
+    animation: pulse 3s infinite;
+}
+
+
+/* =========================================
+   LOADING / PLACEHOLDER
+========================================= */
+
+@keyframes shimmer {
+
+    0% {
+        background-position: -500px 0;
+    }
+
+    100% {
+        background-position: 500px 0;
+    }
+}
+
+.image-placeholder {
+    background:
+        linear-gradient(
+            90deg,
+            #f2f6fa 25%,
+            #e7eef5 50%,
+            #f2f6fa 75%
+        );
+
+    background-size: 1000px 100%;
+
+    animation:
+        shimmer 2s infinite linear;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.nav-menu {
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   Accessibility
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
